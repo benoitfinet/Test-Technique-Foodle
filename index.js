@@ -1,4 +1,17 @@
+/**
+ * @param {string} sentence The sentence
+ * @param {number} n The frequency
+ */
+
 function frequenciesOfWords(sentence, n) {
+
+  if (typeof sentence !== 'string' || sentence === undefined) {
+    throw new Error('Argument must be a string')
+  }
+
+  if (typeof n !== 'number' || n < 0 || n === undefined) {
+    throw new Error('Argument must be a positive number')
+  }
 
     //Je commence par séparer tout les mots avec split. Ils se retrouvent dans un array.
     //Exemple : ("aa bb cc dd ee") devient ["aa", "bb", "cc", "ee"]
@@ -46,8 +59,4 @@ function frequenciesOfWords(sentence, n) {
 
 }
 
-const testSentence = "baz bar foo foo zblah zblah zblah baz toto bar";
-const n = 3;
-const testOutput = frequenciesOfWords(testSentence, n);
-console.log('Attendu : [["zblah", 3], ["bar", 2], ["baz", 2]]')
-console.log(testOutput);
+module.exports = frequenciesOfWords
