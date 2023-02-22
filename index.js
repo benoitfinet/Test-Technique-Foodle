@@ -41,7 +41,7 @@ function frequenciesOfWords(sentence, n) {
       });
 
     //Je retourne le premier element n de la liste
-    //.map est utilisé uniquement pour respecter le
+    //.map est utilisé uniquement pour respecter l'output demandé dans l'exercice
     return sortedWords.slice(0, n).map(([word, frequency]) => [word, frequency]);
 
 }
